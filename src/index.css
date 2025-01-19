@@ -1,3 +1,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: "Regular";
+  src: local("RedHatText-Regular"),
+    url("./assets/fonts/static/RedHatText-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Medium";
+  src: local("RedHatText-Medium"),
+    url("./assets/fonts/static/RedHatText-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Bold";
+  src: local("RedHatText-Bold"),
+    url("./assets/fonts/static/RedHatText-Bold.ttf") format("truetype");
+}
+
+@layer base {
+  body {
+    @apply font-primaryRegular bg-rose50;
+  }
+}
