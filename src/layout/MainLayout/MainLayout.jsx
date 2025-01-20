@@ -3,7 +3,7 @@ import Products from "./Products/Products";
 
 const MainLayout = () => {
   return (
-    <div>
+    <div className="lg:flex lg:justify-between">
       <Products />
       <Cart />
     </div>

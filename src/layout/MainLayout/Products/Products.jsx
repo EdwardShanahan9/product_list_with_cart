@@ -1,8 +1,8 @@
 const Products = () => {
   return (
-    <>
-      <h2>Products</h2>
-    </>
+    <div>
+      <h2 className="text-4xl font-primaryBold">Desserts</h2>
+    </div>
   );
 };
 

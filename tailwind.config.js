@@ -18,6 +18,14 @@ export default {
         primaryMedium: ["Medium"],
         primaryBold: ["Bold"],
       },
+      fontSize: {
+        "4xl": "2.5rem",
+      },
+
+      padding: {
+        lg: "88px",
+        xlg: "112px",
+      },
     },
   },
   plugins: [],
