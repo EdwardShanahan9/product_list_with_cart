@@ -7,12 +7,15 @@ const Products = () => {
       <h1 className="text-4xl font-primaryBold">Desserts</h1>
 
       <div>
-        <Product
-          category={Data[0].category}
-          image={Data[0].image.mobile}
-          name={Data[0].name}
-          price={Data[0].price}
-        />
+        {Data.map((product, index) => (
+          <Product
+            key={index}
+            category={product.category}
+            image={product.image.mobile}
+            name={product.name}
+            price={product.price}
+          />
+        ))}
       </div>
     </div>
   );

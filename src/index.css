@@ -11,7 +11,7 @@
 @font-face {
   font-family: "Medium";
   src: local("RedHatText-Medium"),
-    url("./assets/fonts/static/RedHatText-Medium.ttf") format("truetype");
+    url("./assets/fonts/static/RedHatText-SemiBold.ttf") format("truetype");
 }
 
 @font-face {
