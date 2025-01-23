@@ -1,10 +1,19 @@
+import { useContext } from "react";
 import Button from "../Button/Button";
+import { ButtonActiveContext } from "../../context/ButtonActive/ButtonActiveContext";
 
 const Product = ({ category, image, price, name }) => {
+  const { active } = useContext(ButtonActiveContext);
+
+  console.log(active);
   return (
     <div className="mb-6">
       <div className="mb-4 relative flex items-center justify-center">
-        <img className="rounded-lg " src={image} alt={name} />
+        <img
+          className={`rounded-lg ${active ? "border-2 border-primary" : ""}`}
+          src={image}
+          alt={name}
+        />
 
         <Button />
       </div>
