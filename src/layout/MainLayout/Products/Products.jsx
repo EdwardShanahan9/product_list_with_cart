@@ -6,7 +6,7 @@ const Products = () => {
     <div>
       <h1 className="text-4xl font-primaryBold mb-8">Desserts</h1>
 
-      <div className="grid grid-cols-3 gap-6">
+      <div className="md:grid md:grid-cols-3 gap-6">
         {Data.map((product, index) => (
           <Product
             key={index}
