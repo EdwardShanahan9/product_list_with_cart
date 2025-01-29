@@ -2,20 +2,30 @@ import RemoveIcon from "../../assets/images/icon-remove-item.svg";
 
 const CartItems = () => {
   return (
-    <li>
-      <div>
-        <h3>Classic Tiramisu</h3>
-
+    <li className="mb-4">
+      <div className="flex items-center justify-between">
         <div>
-          <span>1x</span>
+          <h3 className="text-rose900 font-primaryMedium text-sm mb-2">
+            Classic Tiramisu
+          </h3>
 
-          <span>@ $5.50</span>
+          <div>
+            <span className="text-primary font-primaryMedium mr-2">1x</span>
 
-          <span>$5.50</span>
+            <span className="text-rose500 font-primaryMedium mr-2">
+              @ $5.50
+            </span>
+
+            <span className="text-rose500 font-primaryBold mr-2">$5.50</span>
+          </div>
         </div>
 
         <div>
-          <img src={RemoveIcon} alt="Remove Icon" />
+          <img
+            className="block border-rose400 border rounded-full p-1"
+            src={RemoveIcon}
+            alt="Remove Icon"
+          />
         </div>
       </div>
     </li>
