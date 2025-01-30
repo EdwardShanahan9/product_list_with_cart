@@ -2,7 +2,7 @@ import RemoveIcon from "../../assets/images/icon-remove-item.svg";
 
 const CartItems = () => {
   return (
-    <li className="mb-4">
+    <li className="mb-4 pb-4 border-b border-rose100">
       <div className="flex items-center justify-between">
         <div>
           <h3 className="text-rose900 font-primaryMedium text-sm mb-2">

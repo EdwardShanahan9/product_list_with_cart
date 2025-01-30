@@ -3,7 +3,7 @@ import Data from "../../../../data.json";
 
 const Products = () => {
   return (
-    <div>
+    <div className="basis-[65%]">
       <h1 className="text-4xl font-primaryBold mb-8">Desserts</h1>
 
       <div className="md:grid md:grid-cols-3 gap-6">
