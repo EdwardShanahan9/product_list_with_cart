@@ -1,16 +1,31 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import Button from "../Button/Button";
 
 const Product = ({ category, image, price, name }) => {
   const [isActive, setIsActive] = useState(false);
-
+  let [productImage, setProductImage] = useState("");
   const handleActivate = () => setIsActive(true);
+
+  useEffect(() => {
+    const windowWidth = window.innerWidth;
+
+    if (windowWidth <= 480) {
+      setProductImage(image.mobile);
+    } else if (windowWidth >= 480 && windowWidth < 1024) {
+      setProductImage(image.tablet);
+    } else if (windowWidth >= 768 && windowWidth >= 1024) {
+      setProductImage(image.desktop);
+    }
+
+    console.log(productImage);
+  }, [productImage]);
+
   return (
     <div className="mb-6">
       <div className="mb-4 relative flex items-center justify-center">
         <img
           className={`rounded-lg ${isActive ? "border-2 border-primary" : ""}`}
-          src={image}
+          src={productImage}
           alt={name}
         />
 
