@@ -2,12 +2,11 @@ import { useContext, useState } from "react";
 import IconCart from "../../assets/images/icon-add-to-cart.svg";
 import IconAdd from "../../assets/images/icon-increment-quantity.svg";
 import IconMinus from "../../assets/images/icon-decrement-quantity.svg";
-import { AddToCartContext } from "../../context/AddToCart/AddToCartContext";
+import { CartContext } from "../../context/CartContext/CartContext";
 
 const Button = ({ product, onActivate }) => {
-  const [isActive, setIsActice] = useState(false);
   const [counter, setCounter] = useState(0);
-  const { addToCart } = useContext(AddToCartContext);
+  const { addToCart } = useContext(CartContext);
 
   const decrement = () => {
     if (counter > 0) {
