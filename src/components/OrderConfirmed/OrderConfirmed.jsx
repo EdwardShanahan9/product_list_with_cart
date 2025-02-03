@@ -3,17 +3,17 @@ import ConfirmIcon from "../../assets/images/icon-order-confirmed.svg";
 import ThumbnailImage from "../../assets/images/image-tiramisu-thumbnail.jpg";
 
 const OrderConfirmed = () => {
-  useEffect(() => {
-    document.body.classList.add("overflow-hidden");
-    return () => document.body.classList.remove("overflow-hidden");
-  }, []);
+  // useEffect(() => {
+  //   document.body.classList.add("overflow-hidden");
+  //   return () => document.body.classList.remove("overflow-hidden");
+  // }, []);
 
   const handleClose = () => {
     document.body.classList.remove("overflow-hidden");
   };
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-black/50">
+    <div className="fixed inset-0 flex items-center justify-center bg-black/50 hidden">
       <div className="bg-white w-full md:w-[688px] lg:w-[592px] p-10 px-6 rounded-lg shadow-lg">
         <img className="mb-6" src={ConfirmIcon} alt="Tick Icon" />
 

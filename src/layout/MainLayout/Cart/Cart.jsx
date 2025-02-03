@@ -1,14 +1,23 @@
+import { CartContext } from "../../../context/CartContext/CartContext";
+import { useContext } from "react";
 import CartItems from "../../../components/CartItems/CartItems";
 import TreeIcon from "../../../assets/images/icon-carbon-neutral.svg";
-const Cart = () => {
-  return (
-    <div className="bg-white rounded-xl p-6 h-max basis-[30%]">
-      <h2 className="font-primaryBold text-primary text-2xl mb-6">
-        Your Cart <span>(7)</span>
-      </h2>
+import EmptyCarIcon from "../../../assets/images/illustration-empty-cart.svg";
 
+const Cart = () => {
+  const { cartItems } = useContext(CartContext);
+
+  const CartElements = (
+    <div>
       <ul>
-        <CartItems />
+        {cartItems.map((item, index) => (
+          <CartItems
+            key={index}
+            name={item.name}
+            price={item.price}
+            quantity={item.quantity}
+          />
+        ))}
       </ul>
 
       <div className="flex items-center justify-between mb-6">
@@ -29,6 +38,25 @@ const Cart = () => {
       <button className="bg-primary text-base font-primaryMedium text-white rounded-full py-4 w-full">
         Confirm Order
       </button>
+    </div>
+  );
+
+  const cartImageElements = (
+    <div className="flex items-center justify-center flex-col">
+      <img className="mb-4" src={EmptyCarIcon} alt="Empty Cart Icon" />
+
+      <h3 className="text-rose500 font-primaryMedium font-sm">
+        Your added items will appear here
+      </h3>
+    </div>
+  );
+
+  return (
+    <div className="bg-white rounded-xl p-6 h-max basis-[30%]">
+      <h2 className="font-primaryBold text-primary text-2xl mb-6">
+        Your Cart <span>(7)</span>
+      </h2>
+      {cartItems.length > 0 ? CartElements : cartImageElements}
     </div>
   );
 };

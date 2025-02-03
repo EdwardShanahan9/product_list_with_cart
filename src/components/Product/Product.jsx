@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Button from "../Button/Button";
 
 const Product = ({ category, image, price, name }) => {
@@ -16,8 +16,6 @@ const Product = ({ category, image, price, name }) => {
     } else if (windowWidth >= 768 && windowWidth >= 1024) {
       setProductImage(image.desktop);
     }
-
-    console.log(productImage);
   }, [productImage]);
 
   return (
