@@ -1,5 +1,29 @@
+<<<<<<< HEAD
 Frontend Mentor - Product list with cart solution
 This is a solution to the Product list with cart challenge on Frontend Mentor. Frontend Mentor challenges help you improve your coding skills by building realistic projects.
+=======
+# Frontend Mentor - Product list with cart solution
+
+This is a solution to the [Product list with cart challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/product-list-with-cart-5MmqLVAp_d). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
+
+## Table of contents
+
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
+**Note: Delete this note and update the table of contents based on what sections you keep.**
+
+## Overview
+
+### The challenge
+>>>>>>> 13e58a4c7583b0d573f966d071584af5667b9f74
 
 Table of contents
 Overview
@@ -104,6 +128,7 @@ Screenshot
 
 Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
 
+<<<<<<< HEAD
 Alternatively, you can use a tool like FireShot to take the screenshot. FireShot has a free option, so you don't need to purchase it.
 
 Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
@@ -155,3 +180,5 @@ Author
 Website - Add your name here
 Frontend Mentor - @yourusername
 Twitter - @yourusername
+=======
+>>>>>>> 13e58a4c7583b0d573f966d071584af5667b9f74
