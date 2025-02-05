@@ -1,6 +1,7 @@
 import RemoveIcon from "../../assets/images/icon-remove-item.svg";
 
-const CartItems = ({ name, quantity, price }) => {
+const CartItems = ({ name, quantity, price, removeCartItem }) => {
+  console.log(quantity);
   return (
     <li className="mb-4 pb-4 border-b border-rose100">
       <div className="flex items-center justify-between">
@@ -18,12 +19,15 @@ const CartItems = ({ name, quantity, price }) => {
               @ ${price}
             </span>
 
-            <span className="text-rose500 font-primaryBold mr-2">${price}</span>
+            <span className="text-rose500 font-primaryBold mr-2">
+              ${price * quantity}
+            </span>
           </div>
         </div>
 
         <div>
           <img
+            onClick={removeCartItem}
             className="block border-rose400 border rounded-full p-1"
             src={RemoveIcon}
             alt="Remove Icon"

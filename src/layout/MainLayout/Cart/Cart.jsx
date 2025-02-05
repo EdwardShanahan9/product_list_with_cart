@@ -5,7 +5,16 @@ import TreeIcon from "../../../assets/images/icon-carbon-neutral.svg";
 import EmptyCarIcon from "../../../assets/images/illustration-empty-cart.svg";
 
 const Cart = () => {
-  const { cartItems } = useContext(CartContext);
+  const { cartItems, removeCartItem } = useContext(CartContext);
+
+  const totalPrice = cartItems.reduce((total, item) => {
+    return total + item.price * item.quantity;
+  }, 0);
+
+  const totalItems = cartItems.reduce(
+    (total, item) => total + item.quantity,
+    0
+  );
 
   const CartElements = (
     <div>
@@ -16,6 +25,7 @@ const Cart = () => {
             name={item.name}
             price={item.price}
             quantity={item.quantity}
+            removeCartItem={() => removeCartItem(item.name)}
           />
         ))}
       </ul>
@@ -23,7 +33,9 @@ const Cart = () => {
       <div className="flex items-center justify-between mb-6">
         <p className="font-sm text-rose900">Order Total</p>
 
-        <h2 className="font-primaryBold text-rose900 text-2xl">$46.50</h2>
+        <h2 className="font-primaryBold text-rose900 text-2xl">
+          ${totalPrice}
+        </h2>
       </div>
 
       <div className="bg-rose50 rounded-lg py-4 px-5 flex items-center mb-6">
@@ -54,7 +66,7 @@ const Cart = () => {
   return (
     <div className="bg-white rounded-xl p-6 h-max basis-[30%]">
       <h2 className="font-primaryBold text-primary text-2xl mb-6">
-        Your Cart <span>(7)</span>
+        Your Cart <span>({totalItems})</span>
       </h2>
       {cartItems.length > 0 ? CartElements : cartImageElements}
     </div>
