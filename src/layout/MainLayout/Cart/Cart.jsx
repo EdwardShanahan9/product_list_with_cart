@@ -5,7 +5,8 @@ import TreeIcon from "../../../assets/images/icon-carbon-neutral.svg";
 import EmptyCarIcon from "../../../assets/images/illustration-empty-cart.svg";
 
 const Cart = () => {
-  const { cartItems, removeCartItem } = useContext(CartContext);
+  const { cartItems, removeCartItem, displayOrderConfirm } =
+    useContext(CartContext);
 
   const totalPrice = cartItems.reduce((total, item) => {
     return total + item.price * item.quantity;
