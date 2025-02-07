@@ -48,7 +48,10 @@ const Cart = () => {
         </p>
       </div>
 
-      <button className="bg-primary text-base font-primaryMedium text-white rounded-full py-4 w-full">
+      <button
+        onClick={displayOrderConfirm}
+        className="bg-primary text-base font-primaryMedium text-white rounded-full py-4 w-full"
+      >
         Confirm Order
       </button>
     </div>

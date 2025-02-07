@@ -24,6 +24,12 @@ export const CartContextProvider = ({ children }) => {
 
   const displayOrderConfirm = () => setOrderConfirm(true);
 
+  const restartOrder = () => {
+    setCartItems([]);
+
+    setOrderConfirm(false);
+  };
+
   return (
     <CartContext.Provider
       value={{
@@ -32,6 +38,7 @@ export const CartContextProvider = ({ children }) => {
         removeCartItem,
         orderConfirm,
         displayOrderConfirm,
+        restartOrder,
       }}
     >
       {children}

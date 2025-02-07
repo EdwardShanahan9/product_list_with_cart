@@ -4,24 +4,25 @@ import OderConfirmedItem from "../OrderConfirmedItem/OderConfirmedItem";
 import { CartContext } from "../../context/CartContext/CartContext";
 
 const OrderConfirmed = () => {
-  const { cartItems } = useContext(CartContext);
-  const { orderConfirmed } = useContext(CartContext);
+  const { cartItems, orderConfirm, restartOrder } = useContext(CartContext);
 
   useEffect(() => {
-    if (OrderConfirmed) {
+    if (orderConfirm) {
       document.body.classList.add("overflow-hidden");
       return () => document.body.classList.remove("overflow-hidden");
     }
-  }, []);
+  }, [orderConfirm]);
 
   const handleClose = () => {
     document.body.classList.remove("overflow-hidden");
+
+    restartOrder();
   };
 
   return (
     <div
       className={`fixed inset-0 flex items-center justify-center bg-black/50 ${
-        !orderConfirmed ? "hidden" : ""
+        !orderConfirm ? "hidden" : ""
       }`}
     >
       <div className="bg-white w-full md:w-[688px] lg:w-[592px] p-10 px-6 rounded-lg shadow-lg">
